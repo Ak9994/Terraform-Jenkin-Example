@@ -1,7 +1,7 @@
 def InstallTerraform(){
 
     //Check Terraform Installation
-    def CheckTerraform = sh(script: 'which terraform',returnstatus: true)
+    def CheckTerraform = sh(script: 'terraform -version',returnstatus: true)
     
     if(CheckTerraform != 0){
         //install
